@@ -19,4 +19,10 @@ http.listen(3000, function() {
 // Handle a new connection
 io.on('connection', function(socket) {
 
+
+socket.on('new circle', function(socket){
+io.emit('new circle', clientCircle)
+})
+
+
 })
